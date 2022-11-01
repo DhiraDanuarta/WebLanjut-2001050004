@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class=" navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">WebLanjut</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,15 +23,27 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mahasiswa</a>
+                        <a class="nav-link" href="<?= base_url() ?>index.php/mahasiswa/index">Mahasiswa</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url() ?>index.php/home/form">Form</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Ini View home</h1>
+            </div>
+        </div>
+    </div>
+    <script src="<?= base_url('assets/bootstrap/dist/js/bootstrap.js') ?>"></script>
 </body>
 
 </html>

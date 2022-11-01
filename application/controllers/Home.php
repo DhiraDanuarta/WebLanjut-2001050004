@@ -10,10 +10,9 @@ class Home extends CI_Controller
         $this->load->view('home');
     }
 
-
-    public function tampil()
+    public function form()
     {
-        return $this->load->view('v_tampil');
+        return $this->load->view('v_form');
     }
 }
 

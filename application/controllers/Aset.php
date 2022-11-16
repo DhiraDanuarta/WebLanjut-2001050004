@@ -13,12 +13,12 @@ class Aset extends CI_Controller
     public function index()
     {
         $data['isi'] = $this->AsetModel->getAll();
-        $this->load->view('AsetView', $data);
+        $this->load->view('Aset/AsetView', $data);
     }
 
     public function tambah()
     {
-        $this->load->view('AsetTambahView');
+        $this->load->view('Aset/AsetTambahView');
     }
 }
 

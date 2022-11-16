@@ -11,38 +11,42 @@
 
 <body>
     <div class="container mt-4">
-        <div class="alert alert-info text-center" role="alert">
-            <h3>Tugas Menampilkan Data Menggunakan Framework CodeIgniter</h3>
+        <div class="alert alert-primary text-center" role="alert">
+            <h3>Tugas Menambahkan Data Menggunakan Framework CodeIgniter</h3>
         </div>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Fakultas</th>
-                    <th scope="col">Prodi</th>
-                    <th scope="col">Kelas</th>
-                    <th scope="col">Isi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $no = 1;
-                foreach ($isi as $items) :
-                ?>
-                    <tr>
-                        <td><?= $no; ?></td>
-                        <td><?= $items->id; ?></td>
-                        <td><?= $items->fakultas; ?></td>
-                        <td><?= $items->prodi; ?></td>
-                        <td><?= $items->kelas; ?></td>
-                        <td><?= $items->isi; ?></td>
-                    </tr>
-                <?php
-                    $no++;
-                endforeach; ?>
-            </tbody>
-        </table>
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="text-center">Kelas I Komang Dhira Danuarta</h5>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success mb-4" href="<?= site_url('KelasController/tambah') ?>">Tambah</a>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Fakultas</th>
+                            <th scope="col">Prodi</th>
+                            <th scope="col">Kelas</th>
+                            <th scope="col">Isi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($isi as $items) :
+                        ?>
+                            <tr>
+                                <td><?= $items->id; ?></td>
+                                <td><?= $items->fakultas; ?></td>
+                                <td><?= $items->prodi; ?></td>
+                                <td><?= $items->kelas; ?></td>
+                                <td><?= $items->isi; ?></td>
+                            </tr>
+                        <?php
+                        endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 

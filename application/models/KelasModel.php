@@ -12,6 +12,11 @@ class KelasModel extends CI_Model
     {
         return $this->db->get($this->table)->result();
     }
+
+    public function addKelas($data_input)
+    {
+        $this->db->insert($this->table, $data_input);
+    }
 }
 
 /* End of file KelasModel.php */
